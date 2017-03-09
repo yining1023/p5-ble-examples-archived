@@ -1,7 +1,7 @@
 # p5-ble-examples
 Examples for p5.ble.js
 
-# Example 1 
+# Example 1 accelerometer
 This example gets Arduino/Genuino 101 accelerometer values through Bluetooth and shows the values in the Browser
 
 1. Go to `arduino101_sketches` folder, and upload arduino sketch `curie_accelerometer.ino` to Arduino/Genuino 101 board

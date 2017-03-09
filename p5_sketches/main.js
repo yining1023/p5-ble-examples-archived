@@ -5,6 +5,8 @@ var characteristicX;
 var characteristicY;
 var characteristicZ;
 
+var valueX = 0, valueY = 0, valueZ = 0;
+
 function connect() {
   let options = {
     filters: [{
@@ -51,16 +53,31 @@ function startNotify() {
 }
 
 function handleX(event) {
-  let value = event.target.value.getUint8(0);
-  console.log('> X-Axis: ' + value);
+  valueX = event.target.value.getUint8(0);
+  console.log('> X-Axis: ' + valueX);
 }
 
 function handleY(event) {
-  let value = event.target.value.getUint8(0);
-  console.log('> Y-Axis: ' + value);
+  valueY = event.target.value.getUint8(0);
+  console.log('> Y-Axis: ' + valueY);
 }
 
 function handleZ(event) {
-  let value = event.target.value.getUint8(0);
-  console.log('> Z-Axis: ' + value);
+  valueZ = event.target.value.getUint8(0);
+  console.log('> Z-Axis: ' + valueZ);
+}
+
+function setup() {
+  createCanvas(500, 400, WEBGL);
+}
+
+function draw() {
+  background(250);
+  normalMaterial();
+  push();
+  rotateX(valueX * 0.01);
+  rotateY(valueY * 0.01);
+  rotateZ(valueZ * 0.01);
+  box(100, 100, 100);
+  pop();
 }
