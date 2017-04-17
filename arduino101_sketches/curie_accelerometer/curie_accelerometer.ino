@@ -40,7 +40,7 @@ void setup() {
 }
 
 void loop() {
-  float ax, ay, az;
+  int ax, ay, az;
   BLECentral central = blePeripheral.central();
 
   if (central) {
@@ -50,7 +50,7 @@ void loop() {
     while (central.connected()) {
       loopTime = millis();
       if(abs(loopTime - interruptsTime) < 1000 ) {
-        CurieIMU.readAccelerometerScaled(ax, ay, az);
+        CurieIMU.readAccelerometer(ax, ay, az);
 
         CharacteristicX.setValue(ax*100);
         CharacteristicY.setValue(ay*100);
