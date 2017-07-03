@@ -2,14 +2,19 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>BLE</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.4/p5.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.4/addons/p5.dom.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.4/addons/p5.sound.min.js"></script>
+    <title>Arduino 101 BLE LED</title>
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
 
   <body>
+    <h1>Write 1/0 to turn on/off the on-board LED on Arduino 101</h1>
+
+    <button onclick="connectBLE()">Connect</button>
+
+    Write Value: <input type="text" name="writeValue" id="input-box">
+
+    <button onclick="writeToBLE()">Send</button>
+
     <script src="main.js"></script>
   </body>
 </html>
