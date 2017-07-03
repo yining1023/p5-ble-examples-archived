@@ -1,4 +1,4 @@
-const serviceUuid = "20b10010-e8f2-537e-4f6c-d104768a1214"; // lowercase hex characters e.g. '00001234-0000-1000-8000-00805f9b34fb'
+const serviceUuid = "19b10000-e8f2-537e-4f6c-d104768a1214"; // lowercase hex characters e.g. '00001234-0000-1000-8000-00805f9b34fb'
 const name = 'LEDCB';
 
 var ledCharacteristic;
