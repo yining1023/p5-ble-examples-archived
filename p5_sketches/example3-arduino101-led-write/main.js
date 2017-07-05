@@ -1,9 +1,9 @@
 const serviceUuid = "19b10000-e8f2-537e-4f6c-d104768a1214"; // lowercase hex characters e.g. '00001234-0000-1000-8000-00805f9b34fb'
 const name = 'LEDCB';
 
-var ledCharacteristic, input, connectButton, writeButton;
+var ledCharacteristic;
 
-function connectBLE() {
+function connectTo101() {
   let options = {
     filters: [{
       services: [serviceUuid],
@@ -34,7 +34,7 @@ function connectBLE() {
     });
 }
 
-function writeToBLE() {
+function writeTo101() {
   let inputValue = document.getElementById('input-box').value;
 
   let bufferToSend = Uint8Array.of(inputValue);
