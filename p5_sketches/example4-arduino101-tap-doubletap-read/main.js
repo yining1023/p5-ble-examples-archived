@@ -5,7 +5,7 @@ var bluetoothDevice;
 var tapCharacteristic;
 
 var tapValue;
-var heartImage, ouch, ouchouch;
+var heartImage, cryheartImage, ouch, ouchouch;
 var scaleValue = 4;
 
 function connect() {
@@ -66,7 +66,7 @@ function setup() {
 }
 
 function draw() {
-  background('#FBE3EF');
+  background('#FFE3DF');
 
   if (scaleValue <= 4) {
     scaleValue = 4;
